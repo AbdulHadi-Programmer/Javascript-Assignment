@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 4: </h1>
+     <script>
+
+// Part 1: Multiplication Table
+var multiplicationInput = prompt("Enter a number to generate its multiplication table:");
+
+// Convert user input to a number
+var multiplicationNumber = parseInt(multiplicationInput);
+
+// Display the multiplication table using a for loop
+console.log(`Multiplication Table for ${multiplicationNumber}:`);
+for (var i = 1; i <= 10; i++) {
+    var multiplicationResult = multiplicationNumber * i;
+    console.log(`${multiplicationNumber} x ${i} = ${multiplicationResult}`);
+}
+
+// Part 2: Calculate Factorial
+var factorialInput = prompt("Enter a positive integer to calculate its factorial:");
+var factorialNumber = parseInt(factorialInput);
+var factorial = 1;
+var counter = 1;
+
+while (counter <= factorialNumber) {
+    factorial *= counter;
+    counter++;
+}
+
+console.log(`Factorial of ${factorialNumber} is: ${factorial}`);
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 5:</h1>
+    <script>
+// Program to greet the user using a function
+
+// Function to greet the user
+function greetUser(userName) {
+    return `Hello, ${userName}! Welcome to the program.`;
+}
+
+// Prompt user for their name
+var user = prompt("Enter your name:");
+
+// Call the greetUser function and display the greeting
+var greeting = greetUser(user);
+alert(greeting);
+
+// Program to check if a number is prime using a function
+
+// Function to check if a number is prime
+function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Prompt user for a number
+var userNumber = prompt("Enter a positive integer:");
+
+// Convert user input to a number
+var inputNumber = parseInt(userNumber);
+
+// Call the isPrime function and display the result
+var primeResult = isPrime(inputNumber);
+if (primeResult) {
+    alert(`${inputNumber} is a prime number.`);
+} else {
+    alert(`${inputNumber} is not a prime number.`);
+}
+
+    </script>
+</body>
+</html>

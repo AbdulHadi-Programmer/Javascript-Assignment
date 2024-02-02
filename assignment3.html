@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 3: </h1>
+    <script>
+
+    // Program to create a simple marksheet
+
+    // Prompt user for subject grades
+    var mathGrade = prompt("Enter Math grade:");
+    var scienceGrade = prompt("Enter Science grade:");
+    var englishGrade = prompt("Enter English grade:");
+
+    // Convert grades to numbers
+    var math = parseFloat(mathGrade);
+    var science = parseFloat(scienceGrade);
+    var english = parseFloat(englishGrade);
+    
+    // Calculate average
+    var average = (math + science + english) / 3;
+    
+    // Display the marksheet
+    if (average >= 80) {
+        alert("Congratulations! You got an A grade.");
+    } else if (average >= 60) {
+        alert("You got a B grade. Good job!");
+    } else if (average >= 40) {
+        alert("You got a C grade. Keep working hard!");
+    } else {
+        alert("Sorry, you did not pass. Better luck next time.");
+    }
+
+
+    </script>
+</body>
+</html>
