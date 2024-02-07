@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+// JavaScript
+// Part 1 - Simulating Asynchronous Operation
+function simulateAsyncOperation(shouldSucceed) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldSucceed) {
+        resolve('Async operation succeeded!');
+      } else {
+        reject('Async operation failed!');
+      }
+    }, 2000); // Simulating a 2-second asynchronous operation
+  });
+}
+
+// Part 2 - Chaining Promises
+function fetchData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Data fetched successfully!');
+    }, 1500); // Simulating a 1.5-second data fetching operation
+  });
+}
+
+function processData(data) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`Data processed: ${data}`);
+    }, 1000); // Simulating a 1-second data processing operation
+  });
+}
+
+// Chaining promises
+fetchData()
+  .then((data) => processData(data))
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+</script>
+</body>
+</html>
